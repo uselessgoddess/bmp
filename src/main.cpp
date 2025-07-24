@@ -18,7 +18,12 @@ auto process(bmp::image image) {
   bmp::display(std::cout, image);
   std::cout << std::endl;
 
-  image.save("out.bmp");
+  std::string file;
+
+  std::cout << "out file path: ";
+  std::cin >> file;
+
+  image.save(file);
 }
 
 auto main() -> int {
